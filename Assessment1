@@ -1,0 +1,73 @@
+use techmahindra_assessment;
+Database changed
+mysql> select * from student;
++------+---------+--------------------+-----------+----------------+
+| sid  | sname   | email              | address   | admission_year |
++------+---------+--------------------+-----------+----------------+
+| 1001 | sushma  | sushre10@gmail.com | bengaluru |           2025 |
+| 1002 | akash   | sushre10@gmail.com | mangaluru |           2025 |
+| 1003 | kavya   | sushre10@gmail.com | mysore    |           2025 |
+| 1004 | bhavana | sushre10@gmail.com | tumkur    |           2025 |
+| 1005 | prajwal | sushre10@gmail.com | yalahanka |           2025 |
++------+---------+--------------------+-----------+----------------+
+5 rows in set (0.07 sec)
+
+mysql> show tables;
++-----------------------------------+
+| Tables_in_techmahindra_assessment |
++-----------------------------------+
+| course                            |
+| enrollment                        |
+| student                           |
++-----------------------------------+
+3 rows in set (0.04 sec)
+
+mysql> select * from enrollment;
++--------+----------+
+| studid | courseid |
++--------+----------+
+| 1001   | CSE1001  |
+| 1002   | CSE1002  |
+| 1003   | CSE1003  |
+| 1004   | CSE1004  |
+| 1005   | CSE1005  |
++--------+----------+
+5 rows in set (0.03 sec)
+
+mysql> select * from course;
++----------+-----------------+--------+-------+
+| courseid | coursename      | credit | ctype |
++----------+-----------------+--------+-------+
+| CSE1001  | python          |      3 | lab   |
+| CSE1002  | java            |      3 | lab   |
+| CSE1003  | web development |      4 | lab   |
+| CSE1004  | data science    |      4 | lab   |
+| CSE1005  | database        |      2 | lab   |
++----------+-----------------+--------+-------+
+5 rows in set (0.04 sec)
+
+mysql> SELECT * FROM COURSES;
+ERROR 1146 (42S02): Table 'techmahindra_assessment.courses' doesn't exist
+mysql> select * from course;
++----------+-----------------+--------+-------+
+| courseid | coursename      | credit | ctype |
++----------+-----------------+--------+-------+
+| CSE1001  | python          |      3 | lab   |
+| CSE1002  | java            |      3 | lab   |
+| CSE1003  | web development |      4 | lab   |
+| CSE1004  | data science    |      4 | lab   |
+| CSE1005  | database        |      2 | lab   |
++----------+-----------------+--------+-------+
+5 rows in set (0.00 sec)
+
+mysql> SELECT COUNT(COURSEID) "COURSECOUNT" , COURSEID FROM ENROLLMENT GROUP BY COURSEID;
++-------------+----------+
+| COURSECOUNT | COURSEID |
++-------------+----------+
+|           1 | CSE1001  |
+|           1 | CSE1002  |
+|           1 | CSE1003  |
+|           1 | CSE1004  |
+|           1 | CSE1005  |
++-------------+----------+
+5 rows in set (0.01 sec)
