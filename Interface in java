@@ -23,3 +23,10 @@ public class OneAbtrctMtds {
 	
 	}
 }
+
+
+There are 4 types of FunctionalInterface 
+1.Function -> Represent function, that accept one argument process it and produce a result
+2.Consumer -> Represent an opertaion, that accept a single input parameter and returns no result
+3.Predicate -> Boolean(as mentioned in above code)
+4.Supplier ->  Represent the supplier of the result, Accepts no input parameter but produce a result
