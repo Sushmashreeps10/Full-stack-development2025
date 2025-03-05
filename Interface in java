@@ -1,0 +1,25 @@
+Functional Interface using lambda Function
+
+package FunInterfce;
+@FunctionalInterface
+
+interface Predicate<T> {
+	boolean test(T t);
+}
+public class OneAbtrctMtds {
+	public static void main(String[] args) {
+		Predicate<Integer> iseven = (Integer val) -> {
+			if (val%2 == 0) {
+				System.out.println("True");
+				return true;
+			}else {
+				System.out.println("False");
+				return false;
+			}
+			
+		};
+		iseven.test(7);
+		iseven.test(8);
+	
+	}
+}
